@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - TRIKULT</title>
+    <title>TRIKULT - Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="shop.html">Shop</a> | 
-        <a href="collections.html">Collections</a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="collections.html">Collections</a></li>
+        </ul>
     </nav>
-
-    <h1>Contact Us</h1>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <label>Name:</label>
-        <input type="text" name="name" required><br>
-        <label>Email:</label>
-        <input type="email" name="email" required><br>
-        <label>Message:</label>
-        <textarea name="message" required></textarea><br>
-        <button type="submit">Send</button>
-    </form>
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 </body>
 </html>
