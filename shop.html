@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - TRIKULT</title>
+    <title>TRIKULT - Shop</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="collections.html">Collections</a> | 
-        <a href="contact.html">Contact</a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-
-    <h1>Shop</h1>
-    <div class="product">
-        <img src="hoodie.jpg" alt="Hoodie">
-        <p>Command The Chaos Hoodie - $50</p>
-        <button>Buy Now</button>
-    </div>
-
-    <div class="product">
-        <img src="jacket.jpg" alt="Jacket">
-        <p>Premium Street Jacket - $80</p>
-        <button>Buy Now</button>
-    </div>
+    <section class="product-showcase">
+        <h1>Shop Our Latest Collection</h1>
+        <div class="product">
+            <img src="hoodie.jpg" alt="Hoodie">
+            <p>Command The Chaos Hoodie - $50</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="jacket.jpg" alt="Jacket">
+            <p>Premium Street Jacket - $80</p>
+            <button>Buy Now</button>
+        </div>
+    </section>
 </body>
 </html>
