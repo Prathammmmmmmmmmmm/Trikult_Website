@@ -3,49 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRIKULT</title>
+    <title>TRIKULT - Command The Chaos</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #111;
             color: white;
-            font-family: Arial, sans-serif;
         }
-        .logo-container {
+        .navbar {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 200px;
+            padding: 20px;
+            background: black;
         }
-        .logo {
-            width: 150px;
-            opacity: 0;
-            transform: scale(0.5);
-            animation: scaleUp 1s ease-out forwards;
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
         }
-        @keyframes scaleUp {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('hero-image.jpg') center/cover no-repeat;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        .hero button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: red;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .product-showcase {
+            display: flex;
+            gap: 20px;
+            padding: 40px;
+            overflow-x: auto;
+        }
+        .product {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .product img {
+            width: 200px;
+            transition: transform 0.3s;
+        }
+        .product:hover img {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <div class="logo-container">
-        <img src="logo.png" alt="TRIKULT Logo" class="logo">
-    </div>
-    <h1>Welcome to TRIKULT</h1>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="TRIKULT Logo" class="logo">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <h1>COMMAND THE CHAOS</h1>
+        <p>Unleash your style with TRIKULT's premium streetwear.</p>
+        <button>Shop Now</button>
+    </section>
+    
+    <section class="product-showcase">
+        <div class="product">
+            <img src="hoodie.jpg" alt="TRIKULT Hoodie">
+            <p>Command Hoodie</p>
+        </div>
+        <div class="product">
+            <img src="jacket.jpg" alt="TRIKULT Jacket">
+            <p>Urban Jacket</p>
+        </div>
+        <div class="product">
+            <img src="tshirt.jpg" alt="TRIKULT T-Shirt">
+            <p>Minimal Tee</p>
+        </div>
+    </section>
 </body>
 </html>
-
