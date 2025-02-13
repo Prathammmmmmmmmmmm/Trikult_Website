@@ -49,10 +49,10 @@
             cursor: pointer;
         }
         .product-showcase {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 40px;
-            overflow-x: auto;
         }
         .product {
             background: #222;
@@ -61,11 +61,19 @@
             text-align: center;
         }
         .product img {
-            width: 200px;
+            width: 100%;
             transition: transform 0.3s;
         }
         .product:hover img {
             transform: scale(1.1);
+        }
+        .product button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: red;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -75,31 +83,43 @@
             <img src="logo.png" alt="TRIKULT Logo" class="logo">
         </div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     
     <section class="hero">
         <h1>COMMAND THE CHAOS</h1>
         <p>Unleash your style with TRIKULT's premium streetwear.</p>
-        <button>Shop Now</button>
+        <button onclick="location.href='#shop'">Shop Now</button>
     </section>
     
-    <section class="product-showcase">
+    <section id="shop" class="product-showcase">
         <div class="product">
             <img src="hoodie.jpg" alt="TRIKULT Hoodie">
             <p>Command Hoodie</p>
+            <button onclick="location.href='product-page.html'">Buy Now</button>
         </div>
         <div class="product">
             <img src="jacket.jpg" alt="TRIKULT Jacket">
             <p>Urban Jacket</p>
+            <button onclick="location.href='product-page.html'">Buy Now</button>
         </div>
         <div class="product">
             <img src="tshirt.jpg" alt="TRIKULT T-Shirt">
             <p>Minimal Tee</p>
+            <button onclick="location.href='product-page.html'">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="pants.jpg" alt="TRIKULT Pants">
+            <p>Streetwear Pants</p>
+            <button onclick="location.href='product-page.html'">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="bag.jpg" alt="TRIKULT Bag">
+            <p>Minimalist Bag</p>
+            <button onclick="location.href='product-page.html'">Buy Now</button>
         </div>
     </section>
 </body>
